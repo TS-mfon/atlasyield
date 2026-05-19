@@ -74,6 +74,44 @@ values
   )
 on conflict (id) do nothing;
 
+insert into starter_workflows (id, title, summary, cta, thesis, signal_id)
+values
+  (
+    '50000000-0000-0000-0000-000000000001',
+    'Generate the balanced treasury mandate',
+    'Open a seeded Mantle treasury brief that leans into cmETH and USDY while staying inside conservative liquidity bounds.',
+    'Use this mandate',
+    'This allocation prioritizes policy-safe yield by combining cmETH duration with USDY stability. It keeps liquidity inside a treasury-friendly envelope while reducing concentration risk across a single stable route.',
+    '20000000-0000-0000-0000-000000000001'
+  ),
+  (
+    '50000000-0000-0000-0000-000000000002',
+    'Load the concentration risk rebalance',
+    'Review a seeded proposal that trims USDe concentration and rotates into a lower-risk stable allocation mix.',
+    'Load rebalance note',
+    'The rebalance is not a panic exit. It is a policy response to concentration drift, shifting stable exposure toward a more balanced treasury mix and improving liquidity resilience.',
+    '20000000-0000-0000-0000-000000000002'
+  )
+on conflict (id) do nothing;
+
+insert into alert_rules (id, user_id, channel, condition, is_enabled)
+values
+  (
+    '60000000-0000-0000-0000-000000000001',
+    '00000000-0000-0000-0000-000000000002',
+    'email',
+    'Notify treasury ops when a mandate proposal exceeds 30% in a single asset.',
+    true
+  ),
+  (
+    '60000000-0000-0000-0000-000000000002',
+    '00000000-0000-0000-0000-000000000002',
+    'telegram',
+    'Alert when a concentration rebalance is triggered by stable-route drift.',
+    true
+  )
+on conflict (id) do nothing;
+
 insert into audit_logs (id, actor_email, action, target_type, target_id, reason)
 values
   (
