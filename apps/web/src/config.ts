@@ -29,18 +29,18 @@ export const appConfig: AppConfig = {
     adminController: "0x2Da12543C8389C4C70Ae5560c57830bE0C84B2C9"
   },
   theme: {
-    bg: "#0f1116",
-    surface: "rgba(20, 24, 32, 0.8)",
-    surfaceStrong: "rgba(24, 29, 38, 0.98)",
-    line: "rgba(163, 255, 219, 0.1)",
-    text: "#f5f6f3",
-    muted: "#a9b0b0",
-    accent: "#9bf4cf",
-    accentSoft: "rgba(155, 244, 207, 0.1)",
-    accentStrong: "#4ddf9f",
-    glowA: "rgba(77, 223, 159, 0.12)",
-    glowB: "rgba(255, 223, 140, 0.12)",
-    gradient: "linear-gradient(135deg, #f5f0d2 0%, #9bf4cf 100%)"
+    bg: "#0d1316",
+    surface: "rgba(18, 24, 28, 0.82)",
+    surfaceStrong: "rgba(22, 28, 32, 0.98)",
+    line: "rgba(157, 241, 216, 0.11)",
+    text: "#f3f3ef",
+    muted: "#b4b9b4",
+    accent: "#8ff0ca",
+    accentSoft: "rgba(143, 240, 202, 0.12)",
+    accentStrong: "#4add9a",
+    glowA: "rgba(74, 221, 154, 0.13)",
+    glowB: "rgba(239, 246, 210, 0.1)",
+    gradient: "linear-gradient(135deg, #f0ebd1 0%, #8ff0ca 100%)"
   },
   heroStats: [
     { label: "Approved Mantle assets", value: "6" },
